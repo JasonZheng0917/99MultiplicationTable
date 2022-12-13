@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+    body{
+        display: flex;
+        flex-direction:row;
+    }
+    div {
+        margin: 10px;
+    }
+    .container {
+        margin: 0px;
+        width: auto;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap; /*段行*/
+        background-color: aquamarine;
+    }
+    .box {
+        margin: 10px;
+    }
+</style>
+<body>
+
+    <!-- <div class="container">
+        <div class="box" style="background-color:bisque;"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div> -->
+
+    <!--console.log-->
+    <!-- <script type="text/javascript">
+    let line = "";
+    for(let i=1;i<10;i++){  
+	for(let j=1;j<3;j++){
+    	line += (i*j) +"\t";	/*\xa0*/
+	}	
+    	line += '\n';
+    }
+    console.log(line);
+    </script> -->
+
+    <!--querySelectorAll-->
+    <!-- <script>
+    let el = document.querySelectorAll(".box");  /*選擇所有元素*/
+    for (let i = 1; i < 10; i++) {
+    let str = ""; 
+    for (let j = 1; j < 10; j++) {
+        str += "<div>"+i*j+"</div>";
+        el[i-1].innerHTML = str;        /*索引值從0開始*/
+    }
+    }
+    </script> -->
+
+    <!--getElementsByClassName-->
+    <!-- <script>
+    let node = document.getElementsByClassName("box");
+    for (let i = 1; i < 10; i++) {
+    let str = ""; 
+    for (let j = 1; j < 10; j++) {
+        str += i*j+"<br>";
+    }
+    node[i-1].innerHTML=str;
+    }
+    </script> -->
+
+    <!--直接創element-->
+    <!-- <script>
+        for(let i=1;i<10;i++){
+            let div = document.createElement('div');
+            div.className = 'qqq';
+            for(let j=1;j<10;j++){
+                let div2 = document.createElement('div');
+                div2.className = 'eee';
+                div2.textContent = i*j;
+                div.appendChild(div2);
+            }
+            document.querySelector('body').appendChild(div);
+        }
+        
+    </script> -->
+
+<script>
+    for(let i=1;i<10;i++){
+        let div = document.createElement('div');
+        div.className = 'qqq';
+        for(let j=1;j<10;j++){
+            let div2 = document.createElement('div');
+            div2.className = 'eee';
+            div2.textContent = i*j;
+            div.appendChild(div2);
+        }
+        document.querySelector('body').appendChild(div);
+    }
+    
+</script>
+
+</body>
+</html>
